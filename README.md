@@ -40,6 +40,7 @@
 （三）应用是否启动，还是要看具体日志，AutoGetLogExecutorFactory是下载远程日志到本地的模板。
 
 六、关于autoDeploy.sh  
-（一）autoDeploy.sh不是该项目的一部分，是纯ssh实现的从svn拉代码，用mvn编译，将编译后的jar上传远程服务器，并重启远程jboss的脚本。  
-（二）autoDeploy.sh也实现了类似jenkins的功能，但必须运行在linux环境，且装了各种工具mvn java svn等linux工具。
-（三）如果要用git，把脚本中关于svn checkout的部分换成git checkout git pull的命令就好了。
+（一）autoDeploy.sh不是该项目的一部分，是纯sh脚本实现的从svn拉代码，用mvn编译，将编译后的jar上传远程服务器，并重启远程jboss的脚本。  
+（二）autoDeploy.sh也实现了类似jenkins的功能，但必须运行在linux环境，且装了各种工具mvn java svn等linux工具。  
+（三）如果要用git，把脚本中关于svn checkout的部分换成git checkout git pull的命令就好了。  
+（五）非常适用于你有一个专门用于发版的linux跳板机，可以用该脚本实现自动拉代码，自动编译jar，自动上传代码到各个应用服务器，并执行启动脚本。  
