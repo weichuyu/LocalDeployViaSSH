@@ -44,3 +44,4 @@
 （二）autoDeploy.sh也实现了类似jenkins的功能，但必须运行在linux环境，且装了各种工具mvn java svn等linux工具。  
 （三）如果要用git，把脚本中关于svn checkout的部分换成git checkout git pull的命令就好了。  
 （五）非常适用于你有一个专门用于发版的linux跳板机，可以用该脚本实现自动拉代码，自动编译jar，自动上传代码到各个应用服务器，并执行启动脚本。  
+（六）使用时记得将跳板机的公钥放到各个远程服务器上实现证书登录，不然autoDeploy.sh里面每个ssh的步骤都会问你要一次密码。  
