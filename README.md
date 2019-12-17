@@ -30,9 +30,9 @@
 （7）processUniqueWord：确认进程唯一pid的脚本，必须只返回一个唯一的pid  
 （代码没有检查这句话是否返回正确的结果，需要自行保证）  
 比如ps -ef | grep java | grep -v 'grep java' | awk '{print $2}'  
-（8）startCommandPath，startCommand：启动脚本所在路径，启动脚本命令
+（8）startCommandPath，startCommand：启动脚本所在路径，启动脚本命令  
 （二）在process.Processor中添加类似factory.getInstanceTest().run();的语句，并执行。  
-（三）获得结果。
+（三）获得结果。  
 
 五、注意事项  
 （一）请先在测试环境测试过再用于生产。  
