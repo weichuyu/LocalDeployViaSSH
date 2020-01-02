@@ -31,13 +31,20 @@
 （代码没有检查这句话是否返回正确的结果，需要自行保证）  
 比如ps -ef | grep java | grep -v 'grep java' | awk '{print $2}'  
 （8）startCommandPath，startCommand：启动脚本所在路径，启动脚本命令  
-（二）在process.Processor中添加类似factory.getInstanceTest().run();的语句，并执行。  
-（三）获得结果。  
+ ![image](https://github.com/weichuyu/LocalDeployViaSSH/blob/master/sample/img/config.PNG)  
 
+（二）在process.Processor中添加类似factory.getInstanceTest().run();的语句，并执行。  
+ ![image](https://github.com/weichuyu/LocalDeployViaSSH/blob/master/sample/img/main.PNG)  
+ 
+（三）获得结果。  
+ ![image](https://github.com/weichuyu/LocalDeployViaSSH/blob/master/sample/img/output.PNG)  
+ ![image](https://github.com/weichuyu/LocalDeployViaSSH/blob/master/sample/img/backup.PNG)  
+ 
 五、注意事项  
 （一）请先在测试环境测试过再用于生产。  
 （二）建议不要用root（为你找想）。  
 （三）应用是否启动，还是要看具体日志，AutoGetLogExecutorFactory是下载远程日志到本地的模板。
+ ![image](https://github.com/weichuyu/LocalDeployViaSSH/blob/master/sample/img/log.PNG)  
 
 六、关于autoDeploy.sh  
 （一）autoDeploy.sh不是该项目的一部分，是纯sh脚本实现的从svn拉代码，用mvn编译，将编译后的jar上传远程服务器，并重启远程jboss的脚本。  
