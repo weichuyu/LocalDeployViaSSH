@@ -294,7 +294,7 @@ public class AutoDeployExecutor implements Runnable{
 	public static String getTimeStr1() {
 		Calendar instance = Calendar.getInstance();
 		int year = instance.get(instance.YEAR);
-		int month = instance.get(instance.MARCH);
+		int month = instance.get(instance.MONTH);
 		int date = instance.get(instance.DAY_OF_MONTH);
 		int hour = instance.get(instance.HOUR_OF_DAY);
 		int minute = instance.get(instance.MINUTE);
